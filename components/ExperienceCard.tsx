@@ -37,14 +37,14 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
         <p className="uppercase py-5 text-gray-300 text-md">
-          {new Date(experience.dateStarted).toDateString()} -{" "}
-          {experience.isCurrentlyWorkingHere
+          {new Date(experience?.dateStarted).toDateString()} -{" "}
+          {experience?.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(experience.dateEnded).toDateString()}
+            : new Date(experience?.dateEnded).toDateString()}
         </p>
 
         <ul className="list-disc space-y-4 ml-5 text-md">
-          {experience.points.map((point, i) => (
+          {experience?.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
         </ul>

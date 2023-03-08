@@ -36,7 +36,7 @@ function About({ pageInfo }: Props) {
           </h4>
         </div>
         <div>
-          <p className="text-[20px]">{pageInfo.backgroundInformation}</p>
+          <p className="text-[20px]">{pageInfo?.backgroundInformation}</p>
         </div>
       </div>
     </motion.div>

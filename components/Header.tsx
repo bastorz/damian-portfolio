@@ -17,7 +17,7 @@ function Header({ socials }: Props) {
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
       >
-        {socials.map((social, i) => (
+        {socials?.map((social, i) => (
           <SocialIcon
             key={social._id}
             url={social.url}

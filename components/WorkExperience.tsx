@@ -19,8 +19,8 @@ function WorkExperience({ experience }: Props) {
       </h3>
 
       <div className="mt-32 pb-12 w-full flex space-x-5 overflow-x-scroll mb-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {experience.reverse().map((experience, i) => (
-          <ExperienceCard key={experience._id} experience={experience} />
+        {experience?.reverse().map((experience, i) => (
+          <ExperienceCard key={experience?._id} experience={experience} />
         ))}
       </div>
     </motion.div>
