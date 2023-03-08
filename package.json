@@ -15,10 +15,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.5",
-    "react-scroll-to-top": "^3.0.0",
     "react-simple-typewriter": "^5.0.1",
-    "react-social-icons": "^5.15.0",
-    "remove": "^0.1.5"
+    "react-social-icons": "^5.15.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
