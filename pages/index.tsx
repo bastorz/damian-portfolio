@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import About from "../components/About";
@@ -72,7 +72,7 @@ const Home: NextPage<Props> = ({
 export default Home;
 
 // Backend Code
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const projects: Project[] = await fetchProjects();
   const skills: Skill[] = await fetchSkills();
