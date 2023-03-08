@@ -1,86 +1,107 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import About from "../components/About";
+import ContactMe from "../components/ContactMe";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
+import WorkExperience from "../components/WorkExperience";
+import {
+  Experience,
+  FormValues,
+  PageInfo,
+  Project,
+  Skill,
+  Social,
+} from "../typings";
+import { fetchExperience } from "../utils/fetchExperience";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchProjects } from "../utils/fetchProjects";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchSocials } from "../utils/fetchSocials";
+import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
+import BackToTopButton from "../components/BackToTopButton";
+import { fetchPostContact } from "../utils/fetchPostContact";
 
-const Home: NextPage = () => {
+interface Props {
+  pageInfo: PageInfo;
+  experience: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+  // formValues: FormValues[];
+}
+
+const Home: NextPage<Props> = ({
+  pageInfo,
+  experience,
+  skills,
+  projects,
+  socials,
+  // formValues,
+}) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <main className="">
+        <Header socials={socials} />
+        <section id="hero" className="snap-center">
+          <div>
+            <Hero pageInfo={pageInfo} />
+          </div>
+        </section>
+        <section id="about" className="snap-center">
+          <About pageInfo={pageInfo} />
+        </section>
+        <section id="experience" className="snap-center">
+          <WorkExperience experience={experience} />
+        </section>
+        <section id="skills" className="snap-start">
+          <Skills skills={skills} />
+        </section>
+        <section id="projects" className="snap-start">
+          <Projects projects={projects} />
+        </section>
+        <section id="contact" className="snap-start">
+          <ContactMe />
+        </section>
+        <Link href="#hero">
+          <footer className="sticky bottom-5 w-full cursor-pointer">
+            <BackToTopButton />
+          </footer>
+        </Link>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
+
+// Backend Code
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const projects: Project[] = await fetchProjects();
+  const skills: Skill[] = await fetchSkills();
+  const socials: Social[] = await fetchSocials();
+  const experience: Experience[] = await fetchExperience();
+  // const formValues: FormValues[] = await fetchPostContact();
+
+  return {
+    props: {
+      pageInfo,
+      projects,
+      skills,
+      socials,
+      experience,
+      // formValues,
+    },
+
+    revalidate: 10,
+  };
+};

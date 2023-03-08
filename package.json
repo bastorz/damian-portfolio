@@ -6,9 +6,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
+    "@portabletext/react": "^2.0.2",
+    "@sanity/image-url": "^1.0.2",
+    "framer-motion": "^10.1.0",
     "next": "latest",
+    "next-sanity": "^4.1.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.5",
+    "react-scroll-to-top": "^3.0.0",
+    "react-simple-typewriter": "^5.0.1",
+    "react-social-icons": "^5.15.0",
+    "remove": "^0.1.5"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
@@ -16,6 +26,7 @@
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
+    "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4",
     "typescript": "4.9.4"
   }
