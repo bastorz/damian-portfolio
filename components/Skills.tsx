@@ -2,21 +2,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../typings";
+
 type Props = {
   skills: SkillType[];
 };
 
 function Skills({ skills }: Props) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const getResponsive = () => {
-    if (screen.width < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,25 +22,15 @@ function Skills({ skills }: Props) {
         Hover over a skill for current proficiency
       </h3>
 
-      {isMobile && (
-        <div className="grid grid-cols-3 gap-5">
-          {skills?.map((skill) => (
-            <Skill key={skill._id} skill={skill} />
-          ))}
-        </div>
-      )}
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-5">
+        {skills?.slice(0, skills?.length / 2)?.map((skill) => (
+          <Skill key={skill?._id} skill={skill} />
+        ))}
 
-      {!isMobile && (
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-5">
-          {skills?.slice(0, skills.length / 2)?.map((skill) => (
-            <Skill key={skill._id} skill={skill} />
-          ))}
-
-          {skills?.slice(skills.length / 2, skills.length)?.map((skill) => (
-            <Skill key={skill._id} skill={skill} directionLeft />
-          ))}
-        </div>
-      )}
+        {skills?.slice(skills?.length / 2, skills?.length)?.map((skill) => (
+          <Skill key={skill?._id} skill={skill} directionLeft />
+        ))}
+      </div>
     </motion.div>
   );
 }

@@ -1,4 +1,3 @@
-import { PageStaticInfo } from "next/dist/build/analysis/get-page-static-info";
 import { PageInfo } from "../typings";
 
 export const fetchPageInfo = async () => {

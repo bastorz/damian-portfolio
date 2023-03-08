@@ -1,5 +1,4 @@
 import React from "react";
-import Project from "./Project";
 import { motion } from "framer-motion";
 import { Project as ProjectType } from "../typings";
 import { urlFor } from "../sanity";
@@ -61,7 +60,6 @@ function Projects({ projects }: Props) {
             </div>
           </div>
         ))}
-        <Project />
       </div>
 
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />

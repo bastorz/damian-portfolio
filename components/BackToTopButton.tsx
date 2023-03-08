@@ -29,8 +29,6 @@ function BackToTopButton({}: Props) {
     };
   }, []);
 
-  console.log(setIsVisible);
-
   return (
     <div className="flex items-center justify-center">
       <ChevronDoubleUpIcon

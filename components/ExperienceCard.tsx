@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "../typings";
 import { urlFor } from "../sanity";
+
 type Props = {
   experience: Experience;
 };
@@ -30,7 +31,7 @@ function ExperienceCard({ experience }: Props) {
 
           {experience?.technologies?.map((technology) => (
             <img
-              key={technology._id}
+              key={technology?._id}
               src={urlFor(technology?.image).url()}
               className="h-10 w-10 rounded-full"
             />
