@@ -24,7 +24,6 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
 import BackToTopButton from "../components/BackToTopButton";
-import { fetchPostContact } from "../utils/fetchPostContact";
 
 interface Props {
   pageInfo: PageInfo;
@@ -32,7 +31,6 @@ interface Props {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
-  // formValues: FormValues[];
 }
 
 const Home: NextPage<Props> = ({
@@ -41,12 +39,11 @@ const Home: NextPage<Props> = ({
   skills,
   projects,
   socials,
-  // formValues,
 }) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
-        <title>Create Next App</title>
+        <title>{pageInfo.name} - Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
@@ -90,7 +87,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const socials: Social[] = await fetchSocials();
   const experience: Experience[] = await fetchExperience();
-  // const formValues: FormValues[] = await fetchPostContact();
 
   return {
     props: {
@@ -99,7 +95,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       socials,
       experience,
-      // formValues,
     },
 
     revalidate: 10,
