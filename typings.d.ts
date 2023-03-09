@@ -44,6 +44,7 @@ export interface Experience extends SanityBody {
 }
 
 export interface Project extends SanityBody {
+  lenght: ReactNode;
   title: string;
   _type: "project";
   image: Image;

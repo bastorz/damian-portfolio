@@ -3,6 +3,7 @@ import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { PageInfo } from "../typings";
+import BackToTopButton from "./BackToTopButton";
 
 type Props = { pageInfo: PageInfo };
 
@@ -21,7 +22,7 @@ function ContactMe({ pageInfo }: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
 
@@ -33,7 +34,9 @@ function ContactMe({ pageInfo }: Props) {
       >
         <h4 className="text-4xl font-semibold text-center">
           I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Let's Talk.</span>
+          <span className="decoration-[#F7AB0A]/50 underline underline-offset-4">
+            Let's Talk.
+          </span>
         </h4>
 
         <div className="space-y-10">

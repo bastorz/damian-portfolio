@@ -9,6 +9,7 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 import BackToTopButton from "../components/BackToTopButton";
 import dynamic from "next/dynamic";
+import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   pageInfo: PageInfo;
@@ -66,11 +67,10 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <section id="contact" className="snap-start">
         <ContactMe pageInfo={pageInfo} />
       </section>
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <BackToTopButton />
-        </footer>
-      </Link>
+
+      <footer className="sticky bottom-4 w-10 ml-[1670px] rounded-md bg-black hidden xl:flex opacity-60 hover:opacity-100 duration-200">
+        <BackToTopButton />
+      </footer>
     </div>
   );
 };

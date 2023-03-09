@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../typings";
+import BackToTopButton from "./BackToTopButton";
 
 type Props = {
   skills: SkillType[];
