@@ -15,6 +15,7 @@ type Props = {
 function Projects({ projects }: Props) {
   const [current, setCurrent] = useState(0);
   const lenght = projects.length;
+  console.log(current, "currentProject");
 
   if (!Array.isArray(projects) || projects.length <= 0) {
     return null;
