@@ -49,22 +49,22 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header socials={socials} />
-      <section id="hero" className="snap-center">
+      <section id="hero" className="xl:snap-center snap-none">
         <Hero pageInfo={pageInfo} />
       </section>
-      <section id="about" className="snap-center">
+      <section id="about" className="xl:snap-center snap-none">
         <About pageInfo={pageInfo} />
       </section>
-      <section id="experience" className="snap-center">
+      <section id="experience" className="xl:snap-center snap-none">
         <WorkExperience experiences={experiences} />
       </section>
-      <section id="skills" className="snap-start">
+      <section id="skills" className="xl:snap-center snap-none">
         <Skills skills={skills} />
       </section>
-      <section id="projects" className="snap-start">
+      <section id="projects" className="xl:snap-center snap-none">
         <Projects projects={projects} />
       </section>
-      <section id="contact" className="snap-start">
+      <section id="contact" className="xl:snap-center snap-none">
         <ContactMe pageInfo={pageInfo} />
       </section>
 

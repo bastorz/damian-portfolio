@@ -21,18 +21,18 @@ function ContactMe({ pageInfo }: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mt-10 pt-20 mt-[-100px]">
+      <h3 className="absolute top-20 md:top-12  uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
 
       <motion.div
-        className="flex flex-col space-y-10"
+        className="flex flex-col space-y-10 items-center justify-center "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-2xl md:text-4xl max-w-[300px] font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline underline-offset-4">
             Let's Talk.
@@ -42,15 +42,15 @@ function ContactMe({ pageInfo }: Props) {
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
+            <p className="text-lg md:text-2xl">{pageInfo?.phoneNumber}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.email}</p>
+            <p className="text-lg md:text-2xl">{pageInfo?.email}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.address}</p>
+            <p className="text-lg md:text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ function ContactMe({ pageInfo }: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="flex space-x-0 space-y-2 md:space-y-0 md:space-x-2 flex-col md:flex-row">
             <input
               {...register("name")}
               placeholder="Name"

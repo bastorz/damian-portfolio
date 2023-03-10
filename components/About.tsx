@@ -14,9 +14,9 @@ function About({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="h-[600px] md:h-[1000px] 2xl:h-screen relative flex flex-col text-center md:text-left 2xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center mt-[-250px] md:mt-10 pb-32 md:pb-0"
     >
-      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute md:top-2 top-[-250px] 2xl:top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
@@ -26,10 +26,10 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         src="/damian-fondo.png"
         alt="Damian Pic"
-        className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] mt-10"
+        className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 2xl:rounded-lg 2xl:w-96 2xl:h-[500px] mt-32 2xl:mt-10 hidden md:flex"
       />
 
-      <div className="space-y-10 px-0 md:px-10 flex flex-col items-center justify-center mt-10">
+      <div className="space-y-20 md:space-y-10 px-0 md:px-10 flex flex-col items-center justify-center mt-4 2xl:mt-0">
         <div>
           <h4 className="text-4xl font-semibold">
             Here is a{" "}
@@ -39,8 +39,10 @@ function About({ pageInfo }: Props) {
             background
           </h4>
         </div>
-        <div>
-          <p className="text-[20px]">{pageInfo?.backgroundInformation}</p>
+        <div className="pb-20 2xl:pb-0">
+          <p className="text-md md:text-[20px]">
+            {pageInfo?.backgroundInformation}
+          </p>
         </div>
       </div>
     </motion.div>
