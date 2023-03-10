@@ -21,25 +21,25 @@ interface Props {
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   const Header = dynamic(() => import("../components/Header"), {
-    ssr: false,
+    ssr: true,
   });
   const Hero = dynamic(() => import("../components/Hero"), {
-    ssr: false,
+    ssr: true,
   });
   const About = dynamic(() => import("../components/About"), {
-    ssr: false,
+    ssr: true,
   });
   const WorkExperience = dynamic(() => import("../components/WorkExperience"), {
-    ssr: false,
+    ssr: true,
   });
   const Projects = dynamic(() => import("../components/Projects"), {
-    ssr: false,
+    ssr: true,
   });
   const Skills = dynamic(() => import("../components/Skills"), {
-    ssr: false,
+    ssr: true,
   });
   const ContactMe = dynamic(() => import("../components/ContactMe"), {
-    ssr: false,
+    ssr: true,
   });
 
   return (
