@@ -46,7 +46,7 @@ function WorkExperience({ experiences }: Props) {
         />
         <div className="flex items-center justify-center md:pt-[1150px] xl:pt-0 pt-10">
           <div className="mt-32 pb-12 w-full flex ">
-            {experiences?.reverse().map((experience, i) => (
+            {experiences?.map((experience, i) => (
               <div className={`${i === current ? "slide-active" : "slide"}`}>
                 {i === current && (
                   <ExperienceCard
