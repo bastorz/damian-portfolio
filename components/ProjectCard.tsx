@@ -37,7 +37,7 @@ function ProductCard({ project }: Props) {
           </p>
 
           <div className="flex items-center justify-center">
-            <Link href={project.linkToBuild}>
+            <Link href={project.linkToBuild} target="_blank">
               <button className="bg-[#F7AB0A] font-semibold text-lg rounded-md px-4 py-2 opacity-100 hover:opacity-100 duration-200 2xl:opacity-80">
                 Visit Project
               </button>
