@@ -47,7 +47,7 @@ function Projects({ projects }: Props) {
           />
           <div className="flex items-center justify-center">
             <div className="w-full flex mt-[-80px] 2xl:mt-[-100px]">
-              {projects?.reverse().map((project, i) => (
+              {projects?.map((project, i) => (
                 <div className={`${i === current ? "slide-active" : "slide"}`}>
                   {i === current && (
                     <ProjectCard key={project?._id} project={project} />
