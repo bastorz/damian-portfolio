@@ -1,7 +1,6 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import Link from "next/link";
 import { PageInfo } from "../typings";
 
 type Props = {
@@ -36,18 +35,18 @@ function Hero({ pageInfo }: Props) {
         </h1>
 
         <div className="pt-5 opacity-0 md:opacity-100">
-          <Link href="#about">
+          <a href="#about">
             <button className="heroButton">About</button>
-          </Link>
-          <Link href="#experience">
+          </a>
+          <a href="#experience">
             <button className="heroButton">Experience</button>
-          </Link>
-          <Link href="#skills">
+          </a>
+          <a href="#skills">
             <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
+          </a>
+          <a href="#projects">
             <button className="heroButton">Projects</button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

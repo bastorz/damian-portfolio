@@ -9,7 +9,6 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 import BackToTopButton from "../components/BackToTopButton";
 import dynamic from "next/dynamic";
-import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   pageInfo: PageInfo;
