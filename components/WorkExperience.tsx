@@ -14,7 +14,6 @@ type Props = {
 function WorkExperience({ experiences }: Props) {
   const [current, setCurrent] = useState(0);
   const lenght = experiences.length;
-  console.log(current, "current");
 
   if (!Array.isArray(experiences) || experiences.length <= 0) {
     return null;
