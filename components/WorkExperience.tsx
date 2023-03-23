@@ -33,14 +33,14 @@ function WorkExperience({ experiences }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="md:h-screen h-[1100px] flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
+        className="md:h-[1000px] xl:h-[1100px] 2xl:h-screen h-[1100px] flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
       >
-        <h3 className="absolute top-12 md:top-6 xl:top-12 uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="absolute top-12 md:top-6 2xl:top-12 xl:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
           Experience
         </h3>
 
         <ChevronDoubleLeftIcon
-          className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden xl:flex"
+          className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden lg:flex"
           onClick={prevSlide}
         />
         <div className="flex items-center justify-center md:pt-[1150px] xl:pt-0 pt-10">
@@ -58,18 +58,18 @@ function WorkExperience({ experiences }: Props) {
           </div>
         </div>
         <ChevronDoubleRightIcon
-          className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden 2xl:flex"
+          className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden lg:flex"
           onClick={nextSlide}
         />
       </motion.div>
-      <div className="relative flex items-center justify-center xl:hidden md:mt-4">
-        <div className="absolute bottom-[-70px] flex space-x-20 mr-[24px]">
+      <div className="relative flex items-center justify-center lg:hidden">
+        <div className="absolute bottom-[-80px] flex space-x-20">
           <ChevronDoubleLeftIcon
-            className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+            className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
             onClick={prevSlide}
           />
           <ChevronDoubleRightIcon
-            className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+            className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
             onClick={nextSlide}
           />
         </div>

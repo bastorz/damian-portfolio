@@ -14,9 +14,9 @@ function About({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-[600px] md:h-[1000px] 2xl:h-screen relative flex flex-col text-center md:text-left 2xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center mt-[-250px] md:mt-10 pb-32 md:pb-0"
+      className="h-[600px] md:h-[1000px] 2xl:h-screen relative flex flex-col text-center md:text-left 2xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center mt-[-250px] md:mt-32 pb-32 md:pb-0 "
     >
-      <h3 className="absolute md:top-2 top-[-250px] 2xl:top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute md:top-10 top-[-250px] 2xl:top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
