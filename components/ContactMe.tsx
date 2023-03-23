@@ -56,7 +56,7 @@ function ContactMe({ pageInfo }: Props) {
             </div>
           </Link>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#347fa1] h-8 w-8" />
+            <MapPinIcon className="text-[#1a88bb] h-8 w-8" />
             <p className="text-lg md:text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
