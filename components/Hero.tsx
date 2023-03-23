@@ -21,9 +21,9 @@ function Hero({ pageInfo }: Props) {
     <div className="relative md:h-screen h-[400px] flex flex-col space-y-10 md:space-y-20 2xl:space-y-8 items-center justify-center text-center overflow-hidden top-24 mb-[600px] md:mb-0">
       <BackgroundCircles />
       <img
-        src="/damian-fondo.png"
+        src="/4.jpeg"
         alt="Damian Pic"
-        className="relative rounded-full mx-auto object-cover w-36 h-36"
+        className="relative rounded-full mx-auto w-36 h-36  object-cover object-top"
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">

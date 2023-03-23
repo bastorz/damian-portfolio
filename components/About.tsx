@@ -24,7 +24,7 @@ function About({ pageInfo }: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        src="/damian-fondo.png"
+        src="/4.jpeg"
         alt="Damian Pic"
         className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 2xl:rounded-lg 2xl:w-96 2xl:h-[500px] mt-32 2xl:mt-10 hidden md:flex"
       />
