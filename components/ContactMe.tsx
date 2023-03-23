@@ -40,9 +40,9 @@ function ContactMe({ pageInfo }: Props) {
           </span>
         </h4>
         <img
-          src="/damian-fondo.png"
+          src="/4.jpeg"
           alt="Damian Pic"
-          className="relative rounded-full mx-auto object-cover w-36 h-36"
+          className="relative rounded-full mx-auto object-cover object-top w-36 h-36"
         />
 
         <div className="space-y-4">
@@ -56,7 +56,7 @@ function ContactMe({ pageInfo }: Props) {
             </div>
           </Link>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#1a88bb] h-8 w-8" />
+            <MapPinIcon className="text-[#0f85bb] h-8 w-8" />
             <p className="text-lg md:text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
