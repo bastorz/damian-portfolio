@@ -33,11 +33,14 @@ function ContactMe({ pageInfo }: Props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h4 className="text-2xl md:text-4xl max-w-[300px] font-semibold text-center">
-          I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline underline-offset-4">
-            Let's Talk.
-          </span>
+        <h4 className="text-2xl md:text-4xl max-w-[300px] 2xl:max-w-[500px] font-semibold text-center">
+          I have got just what you need. Contact me through{" "}
+          <a
+            href="https://www.linkedin.com/in/dami%C3%A1n-alcalay/"
+            className="decoration-[#F7AB0A]/50 underline underline-offset-4 text-white hover:text-blue-400 duration-200"
+          >
+            Linkedin
+          </a>
         </h4>
         <img
           src="/4.jpeg"
