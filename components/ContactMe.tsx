@@ -23,7 +23,7 @@ function ContactMe({ pageInfo }: Props) {
 
   return (
     <div className="h-[600px] md:h-[800px] xl:h-[700px] 2xl:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mt-10 pt-20 mt-[-100px]">
-      <h3 className="absolute top-16 md:top-32 xl:top-0  uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-16 md:top-32 xl:top-0 2xl:top-32 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
 
