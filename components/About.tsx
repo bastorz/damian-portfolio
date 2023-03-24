@@ -14,7 +14,7 @@ function About({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-[600px] md:h-[1000px] 2xl:h-screen relative flex flex-col text-center md:text-left 2xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center mt-[-250px] md:mt-32 pb-32 md:pb-0 "
+      className="h-[600px] md:h-[1000px] lg:h-[800px] 2xl:h-screen relative flex flex-col text-center md:text-left 2xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center mt-[-250px] md:mt-32 pb-32 md:pb-0 "
     >
       <h3 className="absolute md:top-10 top-[-250px] 2xl:top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
@@ -26,7 +26,7 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         src="/4.jpeg"
         alt="Damian Pic"
-        className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 2xl:rounded-lg 2xl:w-96 2xl:h-[500px] mt-32 2xl:mt-10 hidden md:flex"
+        className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 2xl:rounded-lg 2xl:w-96 2xl:h-[500px] mt-32 2xl:mt-10 hidden xl:flex"
       />
 
       <div className="space-y-20 md:space-y-10 px-0 md:px-10 flex flex-col items-center justify-center mt-4 2xl:mt-0">
