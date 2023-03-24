@@ -48,22 +48,22 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <link rel="icon" href="/da-favicon.ico" />
       </Head>
       <Header socials={socials} />
-      <section id="hero" className="xl:snap-center snap-none">
+      <section id="hero" className="2xl:snap-center snap-none">
         <Hero pageInfo={pageInfo} />
       </section>
-      <section id="about" className="xl:snap-center snap-none">
+      <section id="about" className="2xl:snap-center snap-none">
         <About pageInfo={pageInfo} />
       </section>
-      <section id="experience" className="xl:snap-center snap-none">
+      <section id="experience" className="2xl:snap-center snap-none">
         <WorkExperience experiences={experiences} />
       </section>
-      <section id="skills" className="xl:snap-center snap-none">
+      <section id="skills" className="2xl:snap-center snap-none">
         <Skills skills={skills} />
       </section>
-      <section id="projects" className="xl:snap-center snap-none">
+      <section id="projects" className="2xl:snap-center snap-none">
         <Projects projects={projects} />
       </section>
-      <section id="contact" className="xl:snap-center snap-none">
+      <section id="contact" className="2xl:snap-center snap-none">
         <ContactMe pageInfo={pageInfo} />
       </section>
 

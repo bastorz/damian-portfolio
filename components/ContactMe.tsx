@@ -22,8 +22,8 @@ function ContactMe({ pageInfo }: Props) {
   };
 
   return (
-    <div className="h-[600px] md:h-[800px] xl:h-[700px] 2xl:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mt-10 pt-20 mt-[-100px]">
-      <h3 className="absolute top-16 md:top-32 xl:top-0 2xl:top-32 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="h-[600px] md:h-[800px] lg:h-[400px] lg:py-32 xl:h-[700px] 2xl:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mt-10 pt-20 lg:pt-0 mt-[-100px] lg:mt-0">
+      <h3 className="absolute top-16 md:top-32 lg:top-[-200px] xl:top-0 2xl:top-32 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
 
