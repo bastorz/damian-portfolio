@@ -61,7 +61,7 @@ function Projects({ projects }: Props) {
           />
         </div>
 
-        <div className="relative flex items-center justify-center lg:hidden md:mt-32 mt-72">
+        <div className="relative flex items-center justify-center lg:hidden md:mt-32 mt-60">
           <div className="absolute flex space-x-20 md:bottom-[-200px] bottom-[200px]">
             <ChevronDoubleLeftIcon
               className="w-24 h-24 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
