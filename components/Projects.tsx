@@ -38,7 +38,7 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-48 md:mt-0">
         <div className="w-full flex items-center justify-evenly z-10">
           <ChevronDoubleLeftIcon
             className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden lg:flex"
@@ -61,14 +61,14 @@ function Projects({ projects }: Props) {
           />
         </div>
 
-        <div className="relative flex items-center justify-center lg:hidden md:mt-32">
+        <div className="relative flex items-center justify-center lg:hidden md:mt-32 mt-72">
           <div className="absolute flex space-x-20 md:bottom-[-200px] bottom-[200px]">
             <ChevronDoubleLeftIcon
-              className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+              className="w-24 h-24 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
               onClick={prevSlide}
             />
             <ChevronDoubleRightIcon
-              className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+              className="w-24 h-24 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
               onClick={nextSlide}
             />
           </div>

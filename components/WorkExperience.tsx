@@ -62,14 +62,14 @@ function WorkExperience({ experiences }: Props) {
           onClick={nextSlide}
         />
       </motion.div>
-      <div className="relative flex items-center justify-center lg:hidden">
+      <div className="relative flex items-center justify-center lg:hidden mt-10 md:mt-0">
         <div className="absolute bottom-[-80px] flex space-x-20">
           <ChevronDoubleLeftIcon
-            className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+            className="w-24 h-24 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
             onClick={prevSlide}
           />
           <ChevronDoubleRightIcon
-            className="w-12 h-12 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
+            className="w-24 h-24 md:w-14 md:h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 "
             onClick={nextSlide}
           />
         </div>
