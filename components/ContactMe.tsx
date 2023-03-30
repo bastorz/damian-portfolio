@@ -1,26 +1,12 @@
 import React from "react";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { MapPinIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import { PageInfo, Social } from "../typings";
-import { SocialIcon } from "react-social-icons";
+import { PageInfo } from "../typings";
 import Link from "next/link";
 
 type Props = { pageInfo: PageInfo };
 
-type FormValues = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
 function ContactMe({ pageInfo }: Props) {
-  const { register, handleSubmit } = useForm<FormValues>();
-  const onSubmit: SubmitHandler<FormValues> = (formData) => {
-    window.location.href = `mailto:damianalcalayy@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
-  };
-
   return (
     <div className="h-[600px] md:h-[800px] lg:h-[400px] lg:py-32 xl:h-[700px] 2xl:h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center md:mt-10 pt-20 lg:pt-0 mt-[-100px] lg:mt-0">
       <h3 className="absolute top-16 md:top-32 lg:top-[-200px] xl:top-0 2xl:top-32 uppercase tracking-[20px] text-gray-500 text-2xl">

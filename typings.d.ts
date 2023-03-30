@@ -64,11 +64,3 @@ export interface Social extends SanityBody {
   title: string;
   url: string;
 }
-
-export interface FormValues extends SanityBody {
-  _type: "contact";
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
