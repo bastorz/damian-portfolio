@@ -1,5 +1,4 @@
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
-import React, { useEffect, useState } from "react";
 
 function BackToTopButton() {
   return (

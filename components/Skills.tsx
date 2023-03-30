@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../typings";
