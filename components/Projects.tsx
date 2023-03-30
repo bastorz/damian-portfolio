@@ -34,13 +34,13 @@ function Projects({ projects }: Props) {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="h-[1050px] md:h-[700px] lg:h-[700px] xl:h-[1000px] 2xl:h-screen relative flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 md:mb-32 md:mt-20 xl:pb-40 lg:mt-48"
+      className="h-[1200px] md:h-[700px] lg:h-[700px] xl:h-[1000px] 2xl:h-screen relative flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 md:mb-32 md:mt-20 xl:pb-40 lg:mt-48"
     >
       <h3 className="absolute top-5 md:top-[-30px] lg:top-[-170px] xl:md:top-10 uppercase tracking-[20px] text-gray-500 text-2xl z-18">
         projects
       </h3>
 
-      <div className="flex flex-col md:mt-0">
+      <div className="flex flex-col mt-40 md:mt-0">
         <div className="w-full flex items-center justify-evenly z-10">
           <ChevronDoubleLeftIcon
             className="w-14 h-14 p-1 cursor-pointer hover:bg-white/10 hover:rounded-full hover:p-0 duration-200 hidden lg:flex"
