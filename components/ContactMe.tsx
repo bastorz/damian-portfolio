@@ -28,7 +28,7 @@ function ContactMe({ pageInfo }: Props) {
       </h3>
 
       <motion.div
-        className="flex flex-col space-y-10 items-center justify-center "
+        className="flex flex-col space-y-10 items-center justify-center mt-0 2xl:mt-32"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

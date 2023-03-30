@@ -1,12 +1,20 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import {
+  Experience,
+  PageInfo,
+  Project,
+  Skill,
+  SkillProject,
+  Social,
+} from "../typings";
 import { fetchExperience } from "../utils/fetchExperience";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
+import { fetchSkillsProject } from "../utils/fetchSkillsProject";
 import BackToTopButton from "../components/BackToTopButton";
 import dynamic from "next/dynamic";
 
@@ -16,9 +24,17 @@ interface Props {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
+  skillProjects: SkillProject[];
 }
 
-const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+const Home = ({
+  pageInfo,
+  experiences,
+  skills,
+  projects,
+  socials,
+  skillProjects,
+}: Props) => {
   const Header = dynamic(() => import("../components/Header"), {
     ssr: true,
   });
@@ -80,6 +96,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
+  const skillProjects: SkillProject[] = await fetchSkillsProject();
 
   return {
     props: {
@@ -88,6 +105,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       socials,
+      skillProjects,
     },
   };
 };
